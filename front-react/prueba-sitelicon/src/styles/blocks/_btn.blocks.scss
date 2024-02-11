@@ -1,0 +1,41 @@
+.b-btn {
+    background-color: var(--color-primary--light);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 16px;
+    width: 100%;
+    border: 0;
+    color: var(--color-white);
+    font-weight: 800;
+    border: 2px solid transparent;
+    &--sec{
+        background-color: transparent;
+        border: 2px solid var(--color-white);
+    }
+}
+
+.b-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.b-btn-pages {
+    background-color: var(--color-primary--light);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 16px;
+    width: 40%;
+    border: 0;
+    color: var(--color-white);
+    font-weight: 800;
+    border: 2px solid transparent;
+    &--sec{
+        background-color: transparent;
+        border: 2px solid var(--color-white);
+    }
+}
+
+.counter {
+    width: 100px;
+}

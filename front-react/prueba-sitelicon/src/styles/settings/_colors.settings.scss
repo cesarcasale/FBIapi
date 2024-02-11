@@ -1,0 +1,9 @@
+body[class="dark-theme"]{
+    --color-primary: rgb(0, 0, 128);
+    --color-primary--light:rgb(73, 120, 189);
+}
+
+body[class="light-theme"] {
+    --color-primary: yellow;
+    --color-primary--light: orange;
+}
