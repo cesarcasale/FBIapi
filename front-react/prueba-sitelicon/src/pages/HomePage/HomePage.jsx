@@ -54,5 +54,3 @@ export default function CharactersPage() {
 }
 
 
-
-// como subo el back y el front a github 

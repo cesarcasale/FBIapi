@@ -27,10 +27,16 @@ const DetailsPage = () => {
     <div className="container">
       <div className="row">
         <div className="col">
-          <h4>{fugitive.title}</h4>
+          <img src={fugitive.images[0].large} alt="" />
         </div>
         <div className="col">
-          <img src={fugitive.images[0].large} alt="" />
+          
+          <ul>
+            <li><h4>{fugitive.title.split('-')[0]}</h4></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
       <div className="row">
