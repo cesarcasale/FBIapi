@@ -13,8 +13,8 @@ const Footer = () => {
                             <img className="w-75" src={logoSite} alt="logo-sitelicon" />
                         </div>
                         <div class="col d-flex flex-column align-items-center">
-                            <Link className='btn btn-warning mx-2 w-25' to="">Home</Link>
-                            <Link className='btn btn-warning mx-2 w-25' to="">About</Link>
+                            <Link className='btn btn-warning mx-2 w-25' to="/">Home</Link>
+                            <Link className='btn btn-warning mx-2 w-25' to="/about">About</Link>
                         </div>
                         <div class="col">
                             <img className="w-50 rounded" src={logoPersonal} alt="Cesar Casale" />
