@@ -12,7 +12,7 @@ export default function Pagination ({onChangePage}) {
         onChangePage(newPage)
     }
 
-    return <div className="b-container">
+    return <div className="b-container border-bottom pb-5 border-2">
         <button className="b-btn-pages btn btn-warning w-25" onClick={() => doChangePage(count - 1)}>
             {"<"}
         </button>

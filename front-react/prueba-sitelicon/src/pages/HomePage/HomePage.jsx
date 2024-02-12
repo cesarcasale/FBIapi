@@ -13,7 +13,7 @@ export default function CharactersPage() {
     const [characters, setCharacters] = useState([]);
     const [charactersFiltered, setCharactersFiltered] = useState([]);
     const { search } = useContext(AppContext);
-    const { gender, setGender } = useState("");
+    const [gender, setGender] = useState("");
 
     const getCharacters = async (newPage) => {
         try {
@@ -31,7 +31,6 @@ export default function CharactersPage() {
         }
     };
 
-
     useEffect(() => {
         getCharacters(1);
     }, [search, gender]);
@@ -41,12 +40,14 @@ export default function CharactersPage() {
         );
         setCharactersFiltered(filtered);
     };
-    return <div className='character-page'>
-        <select class="form-select" onChange={(value)=> setGender(value)} aria-label="Default select example">
-            <option selected>Select Gender</option>
-            <option value="Female">Female</option>
-            <option value="Male">Male</option>
+    return <div className='character-page  mt-5'>
+        <label htmlFor="gender">Gender:</label>
+        <select id="gender" className="form-select form-control mt-1" onChange={(event) => setGender(event.target.value)}>
+            <option value=" ">All</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
         </select>
+
         <Gallery data={charactersFiltered} />
         <Pagination onChangePage={getCharacters} />
         <Footer></Footer>
