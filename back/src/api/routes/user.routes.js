@@ -1,4 +1,3 @@
-//4to creamos la ruta
 
 const express = require("express");
 const {newUser} = require("../controllers/user.controller")

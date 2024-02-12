@@ -1,10 +1,9 @@
-//2do paso conectamos con DDBB
 
 
 const mongoose = require("mongoose")
 
 
-const url = "mongodb+srv://cesarfcasale:f25a03cg@cluster0.wshtjkz.mongodb.net/upgradehub?retryWrites=true&w=majority";
+const url = "mongodb+srv:// @cluster0.wshtjkz.mongodb.net/  ?retryWrites=true&w=majority";
  
 
 const connectDb = async ()=>{
