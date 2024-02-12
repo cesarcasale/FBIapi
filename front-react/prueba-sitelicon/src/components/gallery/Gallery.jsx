@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Gallery = ({ data }) => {
   return (
-    <div className="row">
+    <div className="row py-5">
       {data.filter((fugitive)=>fugitive.images.length && fugitive.images[0].large).map((fugitive, index) => (
         <div key={index} className="col-xs-12 col-md-6 col-lg-4 col-xl-3">
             <div className="card c-gallery_item" style={{ width: '15rem'}}>

@@ -13,11 +13,11 @@ export default function CharactersPage() {
     const [characters, setCharacters] = useState([]);
     const [charactersFiltered, setCharactersFiltered] = useState([]);
     const { search } = useContext(AppContext);
-    const { gender, setGender } = useState("");
-
+    // const {gender, setGender} = useState("");
+    // &sex=${gender}
     const getCharacters = async (newPage) => {
         try {
-            const response = await axios.get(`https://api.fbi.gov/wanted/v1/list?page=${newPage}&sex=${gender}`);
+            const response = await axios.get(`https://api.fbi.gov/wanted/v1/list?page=${newPage}`);
             if (response.status !== 200) {
                 throw new Error('Error al obtener los datos');
             }
@@ -31,10 +31,10 @@ export default function CharactersPage() {
         }
     };
 
-
+    // , gender
     useEffect(() => {
         getCharacters(1);
-    }, [search, gender]);
+    }, [search]);
     const searchCharacters = (name) => {
         const filtered = characters.filter((character) =>
             character.name.toLowerCase().includes(name.toLowerCase())
@@ -42,11 +42,11 @@ export default function CharactersPage() {
         setCharactersFiltered(filtered);
     };
     return <div className='character-page'>
-        <select class="form-select" onChange={(value)=> setGender(value)} aria-label="Default select example">
+        {/* <select className="form-select" onChange={(event) => setGender(event.target.value)}>
             <option selected>Select Gender</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
-        </select>
+        </select> */}
         <Gallery data={charactersFiltered} />
         <Pagination onChangePage={getCharacters} />
         <Footer></Footer>
@@ -54,5 +54,3 @@ export default function CharactersPage() {
 }
 
 
-
-// como subo el back y el front a github 
