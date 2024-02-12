@@ -27,21 +27,34 @@ const DetailsPage = () => {
     <div className="container">
       <div className="row">
         <div className="col">
-          <h4>{fugitive.title}</h4>
-        </div>
-        <div className="col">
           <img src={fugitive.images[0].large} alt="" />
         </div>
-      </div>
-      <div className="row">
         <div className="col">
-          <h6>Sexo: {fugitive.sex}</h6>
-          <h6>Edad: {fugitive.age}</h6>
+          <h4>{fugitive.title.split('-')[0]}</h4>
+          <ul>
+            <li>
+              <h6>Sexo: {fugitive.sex}</h6>
+            </li>
+            <li>
+              <h6>Edad: {fugitive.age_max}</h6>
+            </li>
+            <li>
+              <h6>Hair: {fugitive.hair}</h6>
+            </li>
+            <li>
+              <h6>Eyes: {fugitive.eyes}</h6>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="row">
         <div className="col">
           <p>{fugitive.details}</p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+        {/* <img src={fugitive.images[i].large} alt="" /> */}
         </div>
       </div>
     </div>
